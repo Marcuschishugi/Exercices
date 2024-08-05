@@ -1,0 +1,413 @@
+
+        * {
+            margin: 0;
+            padding: 0;
+            font-family: sans-serif;
+        }
+        header {
+            display: flex;
+            justify-content: space-between;
+            padding: 20px 40px;
+        }
+        header h3 {
+            font-size: 2rem;
+
+        }
+        header span {
+            color: #FF6600;
+        }
+        header p {
+            color: black;
+            font-weight: bold;
+        }
+        /* css nav bar */
+        nav {
+            background: #F8F9FA;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 40px;
+        }
+        nav ul {
+            display: flex;
+        }
+        nav ul li {
+            list-style: none;
+            margin: 0 10px;
+        }
+        nav ul li a {
+            text-decoration: none;
+            font-size: 1rem;
+            font-weight: bold;
+            color: black;
+        }
+        nav ul li a:hover {
+            color :#FF6600;
+        }
+        .active a {
+            color: #FF6600;
+        }
+        .btn-orange {
+            background: #FF6600;
+            padding: 15px 25px;
+            border: none;
+            color: white;
+            font-size: 1rem;
+            font-weight: bold;
+            border-radius: 5px;
+        }
+        /* presentation */
+        .presentation {
+            display: flex;
+            width: 100%;
+            height: 75vh;
+            background-image: linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6)), url(img/b1.JPG);
+            background-position: center;
+            background-size: cover;
+            align-items: center;
+            justify-content: center;
+            color: white;
+        }
+        .presentation div p {
+            font-size: 1.7rem;
+            margin-bottom: 30px;
+        }
+        .presentation div h1 {
+            font-size: 4rem;
+        }
+        .presentation div {
+            padding: 20px 40px;
+            text-align: center;
+        }
+        /* description */
+        .description {
+            width: calc(100% - 30%);
+            padding: 5% 15%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .description div img {
+            width: 400px;
+            height: 400px;
+            object-fit: cover;
+        }
+        .description div h5 {
+            font-size: 1rem;
+            font-weight: bold;
+            color: #FF6600;
+            margin-bottom: 20px;
+        }
+        .description div h1 {
+            margin-bottom: 20px;
+        }
+        .description div {
+            padding: 10px;
+        }
+        .contact {
+            width: calc(100% - 30%);
+            padding: 5% 15%;
+            background-image: linear-gradient(rgba(0, 0, 0, 0.7),rgba(0, 0, 0, 0.7)), url(img/registration.jpg);
+            background-size: cover;
+            background-position: center;
+            color: white;
+        }
+        .contact .container h1 {
+            color: #FF6600;
+            margin-bottom: 2%;
+        }
+        .contact .container p {
+            margin-bottom: 2%;
+            font-weight: bold;
+        }
+        .contact .container ul li {
+            list-style: none;
+            margin-bottom: 1%;
+        }
+        footer {
+            background: #212529;
+            margin-top: 5%;
+            justify-content: space-between;
+            display: flex;
+            padding: 5% 40px;
+        }
+        footer h1 {
+            color: #FF6600;
+            font-size: 1.3rem;
+            font-weight: 400;
+            margin-bottom: 1rem;
+        }
+        footer div ul {
+            list-style: none;
+            color: white;
+        }
+        footer div ul li {
+            margin: 10px 0;
+        }
+        footer a {
+            color: white;
+        }
+        footer .link {
+            margin: 10px 0;
+            padding: 10px 0;
+        }
+        footer .link a {
+            text-decoration: none;
+            border: 1px solid white;
+            padding: 7px;
+            font-size: 1rem;
+            font-weight: bold;
+            border-radius: 4px;
+            margin: 0 4px;
+        }
+        footer form {
+            width: 500px;
+            display: flex;
+            margin-top: 60px;
+        }
+        footer form input {
+            width: 100%;
+            height: 60px;
+            border: 0;
+            outline: 0;
+            padding-left: 15px;
+            border-top-left-radius: 8px;
+            border-bottom-left-radius: 8px;
+        }
+        footer form input::placeholder {
+            font-size: 1rem;
+        }
+        footer form button {
+            outline: 0;
+            border: 0;
+            color: white;
+            font-weight: bold;
+            background: #FF6600;
+            padding: 0 25px;
+            border-top-right-radius: 8px;
+            border-bottom-right-radius: 8px;
+        }
+         /*card-container  */
+         .card-container{
+             width: calc(100%-10%);
+             padding: 5% 5%;
+             background: #F8F9FA;
+         }
+         .card-container .line, .card-container .none-line{
+           display: flex;
+           justify-content: space-between;
+         }
+         .line .card-desc .number, .none-line .number {
+             margin-bottom: 20px;
+             font-weight: normal;
+             color: #FF6600;
+         }
+         .line .card-desc{
+             border-bottom: 1px solid #AAAAAA;
+             padding: 35px;
+         }
+         .none-line .card-desc{
+             padding: 35px;
+         }
+         .line .card-desc-line, .none-line .card-desc-line{
+             border-left: 1px solid #AAAAAA;
+             border-right: 1px solid #AAAAAA;
+             padding: 35px;
+         }
+         .line .card-desc .title,.none-line .card-desc .title {
+             margin-bottom: 20px;
+             font-weight: normal;
+             font-size: 25px;
+         }
+         .line .card-desc .descr, .none-line .card-desc .descr {
+             font-weight: normal;
+             font-size: 15px;
+             color: #AAAAAA;
+         }
+         /* service */
+         .service{
+             display: flex;
+             padding: 5%;
+             align-items: center;
+         }
+         .service .service-text{
+             padding: 45px;
+         }
+         .service .service-text .service-card{
+             padding: 20px;
+             margin-bottom: 20px;
+         }
+         .service .service-text .service-card h1{
+             margin-bottom: 15px;
+             font-size: 20px;
+             color: #FF6600;
+         }
+         .service .service-text .service-card p{
+             color: #4e4d4d;
+         }
+         .service .service-text .service-card p:hover{
+             color: #FF6600;
+         }
+         .card-active, .service .service-text .service-card:hover{
+             background: #E9F2F9;
+             box-shadow: 3px 3px 3px 3px #E9F2F9;
+             border-radius: 8px;
+         }
+         .service .service-img img{
+             width: 600px;
+             height: auto;
+         }
+         /* form-group */
+
+         .form-group{
+             background: #F8F9FA;
+             align-items: center;
+             display: flex;
+             justify-content: center;
+             padding:3%;
+         }
+         .form-group form{
+             width: 60%;
+             padding: 30px;
+             background: #FFF;
+             box-shadow: 3px 3px 3px 3px rgba(226, 224, 224, 0.3);
+         }
+         .form-group .input-line{
+             width: calc(100% - 40px);
+             display: flex;
+             justify-content: space-between;
+             margin: 20px;
+             padding: 0;
+         }
+         .form-group .input-line div{
+             width: 48%;
+         }
+         .form-group .input-line input, .form-group .input-line textarea{
+             width: calc(100% - 20px);
+             padding: 10px;
+             outline: none;
+         }
+         .form-group .input-line input:focus, .form-group .input-line textarea:focus{
+            border: 2px solid #FF6600; 
+         }
+         .boutton{
+             display: flex;
+             justify-content: center;
+         }
+         .boutton button{
+             padding: 15px 30px;
+             border: 0;
+             outline: 0;
+             font-weight: bold;
+             background: #FF6600;
+             color: #FFF;
+             border-radius: 6px;
+         }
+         .form-group .input-line textarea{
+             min-height: 100px;
+         }
+         /* ..................  Média query........................ */
+@media(max-width:1234px){
+    footer form{
+        width: 400px;
+    }
+    footer form input{
+        height: 40px;
+    }
+    footer div h1{
+        font-size: 1.2rem;
+    }
+    .description, .service, .form-group, .contact, .card-container,footer{
+        width: calc(100% - 4%);
+        padding: 1.5% 2%;
+    }
+    .service .service-text{
+        padding: 0;
+    }
+    .form-group form{
+        width: 100%;
+    }
+}
+
+
+@media(max-width:920px){
+    .service .service-img img{
+        width: 400px;
+    }
+    .presentation div h1{
+        font-size: 2rem;
+    }
+    .presentation{
+        height: 40vh;
+    }
+}
+
+
+@media(max-width:780px){
+    .hidden{
+        display: none;
+    }
+    header div h3{
+        font-size: 1.5rem;
+    }
+    h1{
+        font-size: 1.5rem;
+    }
+    footer form{
+        width: 300px;
+    }
+}
+
+@media(max-width:650px){
+    .description, .card-container .line, .card-container .none-line, .service, .contact{
+        display: block;
+        text-align: center;
+        justify-content: center;
+    }
+    .line .card-desc-line, .none-line .card-desc-line{
+        border-left: 0;
+        border-right: 0;
+        padding: 20px;
+    }
+    .line .card-desc{
+        border-bottom: 0;
+        padding: 20px;
+    }
+    .form-group form{
+        padding: 0;
+    }
+    footer{
+        display: block;
+    }
+    footer form{
+        width: 100%;
+        margin-top: 20px;
+    }
+}
+
+@media(max-width:500px){
+    nav{
+        display: block;
+    }
+    nav div{
+        margin-bottom: 10px;
+    }
+    img{
+        max-width: 100%;
+        height: auto;
+    }
+}
+
+@media(max-width:350px){
+    nav, header{
+        padding: 1.5% 2%;
+    }
+    nav div ul {
+        display: block;
+    }
+    nav div ul li{
+        padding: 1%;
+        width: calc(100% - 2%);
+    }
+}
+

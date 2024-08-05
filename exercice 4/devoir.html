@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            font-family: sans-serif;
+        }
+       body nav {
+        background:black;
+        color: white;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px 50px;
+       }
+       nav ul {
+        display: flex;
+       }
+       nav ul li {
+        list-style: none;
+        padding: 0 10px;
+       }
+       nav ul li a {
+        text-decoration: none;
+        color: white;
+       }
+       .active a {
+        color: #1bac91;
+        text-decoration-line: underline;
+       }
+       .theme-active a:hover {
+        color: #1bac91;
+        text-decoration-line: underline;
+       }
+       .presentation .theme-active button:hover {
+        background-color: #1bac91;
+        
+       }
+       /* presentation debut */
+       .presentation {
+        width: 100%;
+        height: 600px;
+        background-image: url(img/about.jpg),linear-gradient( rgba(0, 0, 0, 0), rgba(0, 0, 0, 0));
+        background-position: center;
+        background-size: cover;      
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: white;
+       }
+       .presentation div {
+        text-align: center;
+        margin: 0;
+       }
+       .presentation div p {
+        margin: 10px 0;
+       }
+       .presentation div button {
+        padding: 5px 20px;
+        background: none;
+        border-radius: 5px;
+        color: white;
+        border: 2px solid white;
+       }
+       /* description */
+       .description {
+        width: 100%;
+        height: 500px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 0;
+       }
+       .description img {
+        width: 400px;
+        height: 400px;
+        margin: 2rem;
+       }
+       .description p {
+        font-size: 10px;
+        padding-bottom: 10px;
+       }
+       /* card-container */
+       .card-container {
+        width: calc(100% - 10%);
+        padding: 5% 5%;
+        background-color: #F8F9FA;
+       }
+       .card-container .line, .card-container .none-line {
+        display: flex;
+        justify-content: space-between;
+       }
+       .line .number, .none-line .number{
+        font-weight: normal;
+        color: #1bac91;
+        margin-bottom: 20px;
+       }
+       .line .card-desc {
+        border-bottom: 1px solid #AAAAAA;
+        padding: 35px;
+       }
+       .line .title {
+        font-size: 25px;
+        font-weight: normal;
+        margin-bottom: 20px;
+       }
+       .none-line .card-desc {
+        padding: 35px; 
+       }
+       .none-line .title {
+        font-size: 25px;
+        font-weight: normal;
+        margin-bottom: 20px;
+       }
+       .line .card-desc-line, .none-line .card-desc-line {
+        border-left: 1px solid #AAAAAA;
+        border-right: 1px solid #AAAAAA;
+        padding: 35px;
+       }
+       .line .desc {
+        font-size: 15px;
+        font-weight: normal;
+        color: #AAAAAA;
+       }
+       .none-line .desc {
+        font-size: 15px;
+        font-weight: normal;
+        color: #AAAAAA;
+       }
+       /* service */
+       .service {
+        display: flex;
+        align-items: center;
+        padding: 5%;
+       }
+       .service .service-text {
+         padding: 45px;
+       }
+       .service .service-text .service-card {
+            padding: 20px;
+            margin-bottom: 20px;
+       }
+        .service .service-text .service-card h1 {
+            margin-bottom: 15px;
+            font-size: 20px;
+            color: #FF6600;
+       }
+        .service .service-text .service-card p {
+            color: #4e4d4d;
+       }
+        .service .service-text .service-card p:hover {
+            color: #FF6600;
+       }
+         .card-active,.service .service-text .service-card:hover {
+            background: #e9f2f9;
+            box-shadow: 3px 3px 3px 3px #e9f2f9;
+            border-radius: 8px;
+       }
+        .service .service-img img {
+            width: 600px;
+            height: auto;
+       }
+       .article {
+        width: calc(100% -10%);
+        padding: 5%;
+        background-color:#F3F9F9;
+       }
+       .article .article-title {
+        padding: 45px;
+        
+       }
+       .article .article-title h2 {
+        align-items: center;
+        justify-content: center;
+        display: flex;
+        margin-bottom: 15px;
+       }
+       .article .article-text {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 45px;
+        background-color: #FFFFFF;
+        margin: 0 45px;
+       }
+       .article .article-text div {
+       justify-content: space-between;
+       align-items: center;
+       margin: 0 15px;
+       }
+       .article .article-text div h4 {
+        margin-bottom: 15px;
+       }
+       /* formulaire debut */
+       .form-group {
+            background-color: #F8F9FA;
+            display: flex;
+            align-items:center;
+            justify-content: center;
+            padding: 3%;
+       }
+        .form-group form {
+            width: 60%;
+            padding: 30px;
+            background: #fff;
+            box-shadow: 3px 3px 3px 3px rgba(226, 224, 224, 0.3);
+       }
+        .form-group .input-line {
+            width: calc(100% - 40px);
+            display: flex;
+            justify-content: space-between;
+            margin: 20px;
+            padding: 0;
+       }
+        .form-group .input-line div {
+            width: 48%;
+       }
+        .form-group .input-line input, .form-group .input-line textarea {
+            width: calc(100% - 40px);
+            padding: 10px;
+            outline: none;
+       }
+        .form-group .input-line input:focus, .form-group .input-line textarea:focus {
+            border: 2px solid #FF6600;
+       }
+        .boutton {
+            display: flex;
+            justify-content: center;
+       }
+        .boutton button {
+            padding: 15px 30px;
+            border: 0;
+            outline: 0;
+            font-weight: bold;
+            background: #FF6600;
+            color: #fff;
+            border-radius: 6px;
+       }
+         .form-group .input-line textarea {
+            min-height: 100px;
+       }
+       .article .article-text div {
+        border-radius: 30px;
+        margin-block:  20px;
+       }
+    </style>
+</head>
+<body>
+    <nav>
+        <div>
+            <h2>MAXIM</h2>
+        </div>
+       <div >
+        <ul>
+            <li class="active">
+                <a href="#">Home</a>
+            </li>
+            <li class="theme-active">
+                <a href="#">About</a>
+            </li>
+            <li class="theme-active">
+                <a href="#">Services</a>
+            </li>
+            <li class="theme-active">
+                <a href="#">portfolio</a>
+            </li>
+            <li class="theme-active">
+                <a href="#">Team</a>
+            </li>
+            <li class="theme-active">
+                <a href="#">Drop Down</a>
+            </li>
+            <li class="theme-active">
+                <a href="#">Contact</a>
+            </li>
+        </ul>
+       </div>
+    </nav>
+    <!-- presentation debut -->
+    <div class="presentation">
+        <div class="theme-active">
+        <h1>welcome to maxime</h1>
+        <p>we are team of talented gesigners making website with boostrap</p>
+        <button>get started</button>
+        </div>
+    </div>
+    <!-- presentation fin -->
+
+    <!-- description debut -->
+    <div class="description">
+        <div>
+           <img src="img/1720873237939.jpg" > 
+        </div>
+        <div>
+            <h3>voluptatem  dignissimos prodent</h3>
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Excepturi aperiam obcaecati necessitatibus impedit maxime non dolores voluptate quae at in.</p>
+            <h4>corporis voluptatis sit</h4>
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Excepturi aperiam obcaecati necessitatibus impedit maxime non dolores voluptate quae at in.</p>
+            <h4>Utlamco laboris nisi</h4>
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Excepturi aperiam obcaecati necessitatibus impedit maxime non dolores voluptate quae at in.</p>            
+            <h4>Utlamco laboris nisi</h4>
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Excepturi aperiam obcaecati necessitatibus impedit maxime non dolores voluptate quae at in.</p>
+        </div>
+    </div>
+    <!-- descripption fin -->
+
+    <!-- card-container debut -->
+    <div class="card-container">
+    <div class="line">
+        <div class="card-desc">
+            <h4 class="number">01</h4>
+            <h4 class="title">lorem ipsum</h4>
+            <div class="desc">Lorem, ipsum dolor sit amet consectetur adipisicing elit</div>
+        </div>
+        <div class="card-desc card-desc-line">
+            <h4 class="number">02</h4>
+            <h4 class="title">lorem ipsum</h4>
+            <div class="desc">Lorem, ipsum dolor sit amet consectetur adipisicing elit</div>
+        </div>
+        <div class="card-desc">
+            <h4 class="number">03</h4>
+            <h4 class="title">lorem ipsum</h4>
+            <div class="desc">Lorem, ipsum dolor sit amet consectetur adipisicing elit</div>
+        </div>
+    </div>
+    <div class="none-line">
+        <div class="card-desc">
+            <h4 class="number">04</h4>
+            <h4 class="title">lorem ipsum</h4>
+            <div class="desc">Lorem, ipsum dolor sit amet consectetur adipisicing elit</div>
+        </div>
+        <div class="card-desc card-desc-line">
+            <h4 class="number">05</h4>
+            <h4 class="title">lorem ipsum</h4>
+            <div class="desc">Lorem, ipsum dolor sit amet consectetur adipisicing elit</div>
+        </div>
+        <div class="card-desc">
+            <h4 class="number">06</h4>
+            <h4 class="title">lorem ipsum</h4>
+            <div class="desc">Lorem, ipsum dolor sit amet consectetur adipisicing elit</div>
+        </div>
+       </div>
+    </div>
+    <!-- card-container fin -->
+    <!-- service debut -->
+    <div class="service">
+        <div class="service-text">
+            <div class="service-card">
+                <h1>title</h1>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus, nihil.</p>
+            </div>
+            <div class="service-card">
+                <h1>title</h1>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus, nihil.</p>
+            </div>
+            <div class="service-card">
+                <h1>title</h1>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus, nihil.</p>
+            </div>
+            <div class="service-card">
+                <h1>title</h1>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus, nihil.</p>
+            </div>
+        </div>
+        <div class="service-img">
+            <img src="img/about.jpg" alt="img/about.jpg">
+        </div>
+    </div>
+    <!-- service fin -->
+    <!-- article debut -->
+    <div class="article">
+        <div class="article-title">
+            <h2>service</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Possimus autem ratione dolorum ipsa nostrum laudantium ipsum aliquam perspiciatis maiores rerum eligendi ut ipsam esse nisi consequuntur accusantium, laboriosam minima magnam?</p>
+        </div>
+        <div class="article-text">
+            <div>
+                <h4>lorem ipsum</h4>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore, culpa.</p>
+            </div>
+            <div>
+                <h4>sed ut perspicia</h4>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore, culpa.</p>
+            </div>
+            <div>
+                <h4>magni dolores</h4>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore, culpa.</p>
+            </div>
+            <div>
+                <h4>nemo enim</h4>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore, culpa.</p>
+            </div>
+        </div>
+    </div>
+    <!-- article fin -->
+    <!-- formulaire debut -->
+    <div class="form-group">
+        <form>
+            <div class="input-line">
+                    <div><input type="text" placeholder="your name"></div>
+                    <div><input type="text" placeholder="your Email"></div>
+            </div>
+                    <div class="input-line">
+                        <input type="text" placeholder="subject">
+                    </div>
+
+                    <div class="input-line">
+                        <textarea placeholder="Message"></textarea>
+                    </div>
+
+            <div class="boutton">
+                <button>send Message</button>
+            </div>
+        </form>
+    </div>
+    <!-- formulaire fin -->
+</body>
+</html>
